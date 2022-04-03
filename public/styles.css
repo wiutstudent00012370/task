@@ -1,0 +1,115 @@
+:root {
+    font-size: 18px;
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: blue;
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px dotted white;
+    padding: 10px;
+}
+.nav a {
+    display: inline-block;
+    padding: 5px 10px;
+}
+/* home styeles */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.intro-mes {
+    padding: 100px 0 30px 0;
+    font-size: 2rem;
+    max-width: 60%;
+}
+
+.featured {
+    display: inline-block;
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+}
+/* create */
+
+.form {
+    max-width: 60%;
+}
+
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-family: inherit;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: blue;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px 20px;
+    font-family: inherit;
+}
+/* task list */
+
+.task-wrapper {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.task {
+    font-size: 1.5rem;
+}
+
+.delete {
+    display: inline-block;
+    padding: 5px 10px;
+    background: tomato;
+    color: white;
+}
+
+.error {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid red;
+    font-size: 1.2rem;
+    color: red;
+}
+
+.done {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid green;
+    font-size: 1.2rem;
+    color: green;
+}
