@@ -5,7 +5,7 @@
 To run this web application  you must follow steps indicated beloew
 
 1. Clone this repo
-```git clone [repo link] 
+```git clone https://github.com/wiutstudent00012370/task.git
 ```
 
 
@@ -26,4 +26,4 @@ node app
 - pug.js
 
 ### Repository link
-[repo link] 
+https://github.com/wiutstudent00012370/task.git 
