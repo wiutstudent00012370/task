@@ -1,4 +1,5 @@
 const express = require('express')
+const req = require('express/lib/request')
 
 const app = express()
 
@@ -59,7 +60,7 @@ app.get('/tasks', (req, res) => {
 })
     
 
-app.get('/tasks/:id', (req, res) => {
+app.get('/tasks:id', (req, res) => {
   const id = req.params.id
   fs.readFile('./data/tasks.json', (err, data) => {
     if (err) throw err
@@ -70,6 +71,23 @@ app.get('/tasks/:id', (req, res) => {
     })
     
 })
+
+app.get('/:id/delete', (req, res) => {
+    const id = req.params.id
+    fs.readFile('./data/tasks.json', (err, data) => {
+        if(err) throw err
+        const tasks = JSON.parse(data)
+
+        const filteredTasks = tasks.filter(task => task.id != id)
+        fs.writeFile('./data/tasks.json', JSON.stringify(filteredTasks), (err) => {
+            if (err) throw err
+
+            res.render('tasks', { tasks: filteredTasks, deleted: true})
+        })
+    })
+})
+
+
 
 app.listen(5000, err => {
     if(err) console.log(err)

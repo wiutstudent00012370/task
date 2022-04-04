@@ -1,10 +1,11 @@
 extends layout.pug 
 
 block content 
+    
     div.container 
         h1   All Tasks
 
         each task in tasks 
             div.task-wrapper 
                 a.task(href=`/tasks/${ tasks.id }`) #{ task.title }  
-                a.delete(href="#") delete  
+                a.delete(href=`/${ tasks .id }/delete`) Delete 

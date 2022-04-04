@@ -5,10 +5,11 @@ html(lang='en')
         link(rel='stylesheet', href='/static/styles.css')
     body 
         header.navbar 
-            h1 Tasks App  
+            h1 
+                a(href="/") Tasks App   
                 
 
             nav.nav
                 a(href='/tasks') All Tasks 
-                a(href='/archive') Archive 
+                
         block content 
