@@ -89,7 +89,7 @@ app.get('/:id/delete', (req, res) => {
 
 
 
-app.listen(5050, err => {
+app.listen(process.env.PORT || 5050, err => {
     if(err) console.log(err)
     console.log('Server is running on the port 5050')
 })
@@ -99,4 +99,4 @@ function id () {
     
     return '_' + Math.random().toString(36).substring(2, 9);
   }
-//http://localhost:5000
+//http://localhost:5050

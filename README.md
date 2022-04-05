@@ -1,6 +1,6 @@
 # Tasks web app
 
-### This web application allows users to create, edit, delete notes
+### This web application allows users to create, edit, delete tasks
 
 To run this web application  you must follow steps indicated beloew
 
