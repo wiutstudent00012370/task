@@ -7,5 +7,6 @@ block content
 
         each task in tasks 
             div.task-wrapper 
-                a.task(href=`/tasks/${ tasks.id }`) #{ task.title }  
-                a.delete(href=`/${ tasks .id }/delete`) Delete 
+                a.task(href=`tasks/${ task.id }`) #{ task.title }  
+                a.delete(href=`/${ task.id }/delete`) Delete 
+                

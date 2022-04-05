@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -17,7 +18,8 @@ a:hover {
     color: blue;
 }
 
-.navbar {
+.navbar,
+.nav {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
@@ -26,10 +28,10 @@ a:hover {
     border-bottom: 1px dotted white;
     padding: 10px;
 }
-.nav a {
-    display: inline-block;
-    padding: 5px 10px;
+.nav {
+    margin-right: 0;
 }
+
 /* home styeles */
 
 .container {
@@ -38,16 +40,25 @@ a:hover {
     padding: 10px;
 }
 .intro-mes {
-    padding: 100px 0 30px 0;
+    padding: 50px 0 30px 0;
     font-size: 2rem;
-    max-width: 60%;
+    max-width: 50%;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 70px;
 }
 
 .featured {
     display: inline-block;
-    padding: 10px 20px;
+    
+    padding: 15px 20px;
     background: blue;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+.featured:hover {
+    color: red;
 }
 /* create */
 
@@ -84,17 +95,20 @@ a:hover {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    text-align: center;
 }
 
 
 .task {
     font-size: 1.5rem;
+    text-align: center;
 }
+
 
 .delete {
     display: inline-block;
     padding: 5px 10px;
-    background: tomato;
+    background: rgb(158, 56, 38);
     color: white;
 }
 
@@ -112,4 +126,22 @@ a:hover {
     border: 1px solid green;
     font-size: 1.2rem;
     color: green;
+}
+
+.title {
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.description {
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.topic {
+    text-align: center;
+    margin-bottom: 20px;
 }

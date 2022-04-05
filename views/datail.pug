@@ -1,6 +1,7 @@
 extends layout.pug 
 
 block content
-    div.container  
-        h1.title #{ task.title }
-        p.description #{ task.description } 
+    div.container 
+        h1.topic Task 
+        h2.title= task.title 
+        p.description= task.description

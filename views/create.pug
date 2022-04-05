@@ -4,9 +4,9 @@ block content
         h1 Create new Task 
 
         if error 
-            p.error Some error occured 
+            p.error Please add  task! 
 
-        if success 
+        if done  
             p.done  Task is created!
 
         form(action="/create" method='POST') 

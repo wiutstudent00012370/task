@@ -39,7 +39,7 @@ app.post('/create', (req, res) => {
             fs.writeFile('./data/tasks.json', JSON.stringify(tasks), err => {
                 if (err) throw err
 
-                res.render('create', { done: true, msg: 'Task is created' })
+                res.render('create', { done: true })
             })
         })
     }
@@ -60,14 +60,14 @@ app.get('/tasks', (req, res) => {
 })
     
 
-app.get('/tasks:id', (req, res) => {
-  const id = req.params.id
-  fs.readFile('./data/tasks.json', (err, data) => {
-    if (err) throw err
+app.get('/tasks/:id', (req, res) => {
+    const id = req.params.id
+    fs.readFile('./data/tasks.json', (err, data) => {
+        if (err) throw err
 
-    const tasks = JSON.parse(data)
-    const task = tasks.filter(task => task.id == id)[0]
-    res.render('datail', { task: task})
+        const tasks = JSON.parse(data)
+        const task = tasks.filter(task => task.id == id)[0]
+        res.render('datail', { task: task})
     })
     
 })
@@ -89,9 +89,9 @@ app.get('/:id/delete', (req, res) => {
 
 
 
-app.listen(5000, err => {
+app.listen(5050, err => {
     if(err) console.log(err)
-    console.log('Server is running on the port 5000')
+    console.log('Server is running on the port 5050')
 })
 
 
